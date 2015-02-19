@@ -1,0 +1,391 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.12
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 15, 2015 at 12:16 AM
+-- Server version: 5.5.36
+-- PHP Version: 5.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `ow_invendp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `barang`
+--
+
+CREATE TABLE IF NOT EXISTS `barang` (
+  `bId` int(20) NOT NULL AUTO_INCREMENT,
+  `bKode` varchar(50) NOT NULL,
+  `bInv` varchar(50) NOT NULL,
+  `bNama` varchar(50) NOT NULL,
+  `bMerk` varchar(100) NOT NULL,
+  `bSpek` text,
+  `bKat` int(11) NOT NULL,
+  `bAsal` int(11) NOT NULL,
+  `bTgl` date NOT NULL,
+  `bKondisi` enum('1','0') DEFAULT '1',
+  `onCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `onUpdate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`bId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
+
+--
+-- Dumping data for table `barang`
+--
+
+INSERT INTO `barang` (`bId`, `bKode`, `bInv`, `bNama`, `bMerk`, `bSpek`, `bKat`, `bAsal`, `bTgl`, `bKondisi`, `onCreate`, `onUpdate`) VALUES
+(1, 'DP.140215.001', 'DP.140215.001.1', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '0', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(2, 'DP.140215.001', 'DP.140215.001.2', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(3, 'DP.140215.001', 'DP.140215.001.3', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(4, 'DP.140215.001', 'DP.140215.001.4', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(5, 'DP.140215.001', 'DP.140215.001.5', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(6, 'DP.140215.001', 'DP.140215.001.6', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(7, 'DP.140215.001', 'DP.140215.001.7', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(8, 'DP.140215.001', 'DP.140215.001.8', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(9, 'DP.140215.001', 'DP.140215.001.9', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(10, 'DP.140215.001', 'DP.140215.001.10', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(11, 'DP.140215.001', 'DP.140215.001.11', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(12, 'DP.140215.001', 'DP.140215.001.12', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(13, 'DP.140215.001', 'DP.140215.001.13', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(14, 'DP.140215.001', 'DP.140215.001.14', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(15, 'DP.140215.001', 'DP.140215.001.15', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(16, 'DP.140215.001', 'DP.140215.001.16', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(17, 'DP.140215.001', 'DP.140215.001.17', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(18, 'DP.140215.001', 'DP.140215.001.18', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(19, 'DP.140215.001', 'DP.140215.001.19', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(20, 'DP.140215.001', 'DP.140215.001.20', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(21, 'DP.140215.001', 'DP.140215.001.21', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(22, 'DP.140215.001', 'DP.140215.001.22', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(23, 'DP.140215.001', 'DP.140215.001.23', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(24, 'DP.140215.001', 'DP.140215.001.24', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(25, 'DP.140215.001', 'DP.140215.001.25', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(26, 'DP.140215.001', 'DP.140215.001.26', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(27, 'DP.140215.001', 'DP.140215.001.27', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(28, 'DP.140215.001', 'DP.140215.001.28', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(29, 'DP.140215.001', 'DP.140215.001.29', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(30, 'DP.140215.001', 'DP.140215.001.30', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(31, 'DP.140215.001', 'DP.140215.001.31', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(32, 'DP.140215.001', 'DP.140215.001.32', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(33, 'DP.140215.001', 'DP.140215.001.33', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(34, 'DP.140215.001', 'DP.140215.001.34', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(35, 'DP.140215.001', 'DP.140215.001.35', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(36, 'DP.140215.001', 'DP.140215.001.36', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(37, 'DP.140215.001', 'DP.140215.001.37', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(38, 'DP.140215.001', 'DP.140215.001.38', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(39, 'DP.140215.001', 'DP.140215.001.39', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(40, 'DP.140215.001', 'DP.140215.001.40', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(41, 'DP.140215.001', 'DP.140215.001.41', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(42, 'DP.140215.001', 'DP.140215.001.42', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(43, 'DP.140215.001', 'DP.140215.001.43', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(44, 'DP.140215.001', 'DP.140215.001.44', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(45, 'DP.140215.001', 'DP.140215.001.45', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(46, 'DP.140215.001', 'DP.140215.001.46', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(47, 'DP.140215.001', 'DP.140215.001.47', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(48, 'DP.140215.001', 'DP.140215.001.48', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(49, 'DP.140215.001', 'DP.140215.001.49', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(50, 'DP.140215.001', 'DP.140215.001.50', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(51, 'DP.140215.001', 'DP.140215.001.51', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(52, 'DP.140215.001', 'DP.140215.001.52', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(53, 'DP.140215.001', 'DP.140215.001.53', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(54, 'DP.140215.001', 'DP.140215.001.54', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(55, 'DP.140215.001', 'DP.140215.001.55', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(56, 'DP.140215.001', 'DP.140215.001.56', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(57, 'DP.140215.001', 'DP.140215.001.57', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(58, 'DP.140215.001', 'DP.140215.001.58', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(59, 'DP.140215.001', 'DP.140215.001.59', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(60, 'DP.140215.001', 'DP.140215.001.60', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(61, 'DP.140215.001', 'DP.140215.001.61', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(62, 'DP.140215.001', 'DP.140215.001.62', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(63, 'DP.140215.001', 'DP.140215.001.63', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(64, 'DP.140215.001', 'DP.140215.001.64', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(65, 'DP.140215.001', 'DP.140215.001.65', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(66, 'DP.140215.001', 'DP.140215.001.66', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(67, 'DP.140215.001', 'DP.140215.001.67', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(68, 'DP.140215.001', 'DP.140215.001.68', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(69, 'DP.140215.001', 'DP.140215.001.69', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(70, 'DP.140215.001', 'DP.140215.001.70', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(71, 'DP.140215.001', 'DP.140215.001.71', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(72, 'DP.140215.001', 'DP.140215.001.72', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(73, 'DP.140215.001', 'DP.140215.001.73', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(74, 'DP.140215.001', 'DP.140215.001.74', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(75, 'DP.140215.001', 'DP.140215.001.75', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(76, 'DP.140215.001', 'DP.140215.001.76', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(77, 'DP.140215.001', 'DP.140215.001.77', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(78, 'DP.140215.001', 'DP.140215.001.78', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(79, 'DP.140215.001', 'DP.140215.001.79', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(80, 'DP.140215.001', 'DP.140215.001.80', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(81, 'DP.140215.001', 'DP.140215.001.81', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(82, 'DP.140215.001', 'DP.140215.001.82', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(83, 'DP.140215.001', 'DP.140215.001.83', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(84, 'DP.140215.001', 'DP.140215.001.84', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(85, 'DP.140215.001', 'DP.140215.001.85', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(86, 'DP.140215.001', 'DP.140215.001.86', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(87, 'DP.140215.001', 'DP.140215.001.87', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(88, 'DP.140215.001', 'DP.140215.001.88', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(89, 'DP.140215.001', 'DP.140215.001.89', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(90, 'DP.140215.001', 'DP.140215.001.90', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(91, 'DP.140215.001', 'DP.140215.001.91', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(92, 'DP.140215.001', 'DP.140215.001.92', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(93, 'DP.140215.001', 'DP.140215.001.93', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(94, 'DP.140215.001', 'DP.140215.001.94', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(95, 'DP.140215.001', 'DP.140215.001.95', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(96, 'DP.140215.001', 'DP.140215.001.96', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(97, 'DP.140215.001', 'DP.140215.001.97', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03'),
+(99, 'DP.140215.001', 'DP.140215.001.99', 'Personal Computer', 'Intel Atom', '<ul>\r\n	<li>RAM : 1 GB</li>\r\n	<li>Hardisk : 250 GB</li>\r\n	<li>CD-ROOM</li>\r\n	<li>OS : Win 7</li>\r\n</ul>\r\n', 1, 1, '2015-02-11', '1', '2015-02-13 22:24:44', '2015-02-13 23:12:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ms_kategori`
+--
+
+CREATE TABLE IF NOT EXISTS `ms_kategori` (
+  `kId` int(11) NOT NULL AUTO_INCREMENT,
+  `kNama` varchar(100) NOT NULL,
+  `onCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `onUpdate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`kId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `ms_kategori`
+--
+
+INSERT INTO `ms_kategori` (`kId`, `kNama`, `onCreate`, `onUpdate`) VALUES
+(1, 'PC Komputer', '2014-08-31 10:10:50', '2015-02-12 04:05:26'),
+(2, 'AVO Meter', '2014-08-31 10:11:22', '2015-02-12 04:10:54'),
+(3, 'LAN Tester', '2014-08-31 10:11:37', '2015-02-12 04:11:36'),
+(8, 'Hub', '2015-02-12 04:11:56', NULL),
+(7, 'Monitor/LCD', '2015-02-12 04:06:02', '2015-02-12 04:06:25'),
+(9, 'Access Point', '2015-02-12 04:13:29', NULL),
+(10, 'Crimping', '2015-02-12 04:14:12', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ms_ruangan`
+--
+
+CREATE TABLE IF NOT EXISTS `ms_ruangan` (
+  `rKode` varchar(20) NOT NULL,
+  `rNama` varchar(100) NOT NULL,
+  `rJenis` int(11) NOT NULL,
+  `onCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `onUpdate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`rKode`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ms_ruangan`
+--
+
+INSERT INTO `ms_ruangan` (`rKode`, `rNama`, `rJenis`, `onCreate`, `onUpdate`) VALUES
+('R.301', 'R.301', 1, '2015-02-12 02:29:23', NULL),
+('R.302', 'R.302', 1, '2015-02-12 02:29:48', NULL),
+('R.303', 'R.303', 1, '2015-02-12 02:29:57', NULL),
+('R.304', 'R.304', 1, '2015-02-12 02:30:05', NULL),
+('R.305', 'R.305', 1, '2015-02-12 02:30:12', NULL),
+('R.306', 'R.306', 1, '2015-02-12 02:30:24', NULL),
+('R.307', 'R.307', 2, '2015-02-12 02:30:36', NULL),
+('R.308', 'R.308', 2, '2015-02-12 02:30:45', NULL),
+('R.309', 'R.309', 1, '2015-02-12 02:30:57', NULL),
+('R.310', 'R.310', 1, '2015-02-12 02:31:07', NULL),
+('R.311', 'R.311', 1, '2015-02-12 02:31:17', NULL),
+('R.312', 'R.312', 3, '2015-02-12 02:31:27', NULL),
+('R.313', 'R.313', 1, '2015-02-12 02:31:35', NULL),
+('R.314', 'R.314', 1, '2015-02-12 02:31:44', NULL),
+('R.315', 'R.315', 1, '2015-02-12 02:31:57', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `penempatan`
+--
+
+CREATE TABLE IF NOT EXISTS `penempatan` (
+  `pInv` varchar(50) NOT NULL,
+  `pRuang` varchar(50) NOT NULL,
+  PRIMARY KEY (`pInv`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penempatan`
+--
+
+INSERT INTO `penempatan` (`pInv`, `pRuang`) VALUES
+('DP.140215.001.1', 'R.301'),
+('DP.140215.001.2', 'R.301'),
+('DP.140215.001.3', 'R.301'),
+('DP.140215.001.4', 'R.301'),
+('DP.140215.001.5', 'R.301'),
+('DP.140215.001.6', 'R.301'),
+('DP.140215.001.7', 'R.301'),
+('DP.140215.001.8', 'R.301'),
+('DP.140215.001.9', 'R.301'),
+('DP.140215.001.10', 'R.301'),
+('DP.140215.001.11', 'R.301'),
+('DP.140215.001.12', 'R.301'),
+('DP.140215.001.13', 'R.301'),
+('DP.140215.001.14', 'R.301'),
+('DP.140215.001.15', 'R.301'),
+('DP.140215.001.16', 'R.301'),
+('DP.140215.001.17', 'R.301'),
+('DP.140215.001.18', 'R.301'),
+('DP.140215.001.19', 'R.301'),
+('DP.140215.001.20', 'R.301');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `perbaikan`
+--
+
+CREATE TABLE IF NOT EXISTS `perbaikan` (
+  `pTiket` varchar(50) NOT NULL,
+  `pInv` varchar(50) NOT NULL,
+  `pTgl` varchar(50) NOT NULL,
+  `pKerusakan` text,
+  `pPJ` varchar(255) NOT NULL,
+  `pProses` enum('1','0') DEFAULT '1',
+  `onCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `onUpdate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`pTiket`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `perbaikan`
+--
+
+INSERT INTO `perbaikan` (`pTiket`, `pInv`, `pTgl`, `pKerusakan`, `pPJ`, `pProses`, `onCreate`, `onUpdate`) VALUES
+('P.150215.001', 'DP.140215.001.1', '2015-02-09', '<p>Gagal Booting OS Edit</p>\r\n', 'Teknisi', '0', '2015-02-14 19:05:34', '2015-02-14 19:23:52'),
+('P.150215.002', 'DP.140215.001.1', '2015-02-15', '<p>Korsleting</p>\r\n', 'Teknisi', '1', '2015-02-14 21:05:09', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sperbaikan`
+--
+
+CREATE TABLE IF NOT EXISTS `sperbaikan` (
+  `pTiket` varchar(50) NOT NULL,
+  `pTglS` varchar(50) NOT NULL,
+  `pKondisi` enum('1','0') DEFAULT '1',
+  `pKet` text,
+  PRIMARY KEY (`pTiket`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sperbaikan`
+--
+
+INSERT INTO `sperbaikan` (`pTiket`, `pTglS`, `pKondisi`, `pKet`) VALUES
+('P.150215.001', '2015-02-15', '1', '<p>Baik</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `uId` varchar(20) NOT NULL,
+  `uUname` varchar(20) NOT NULL,
+  `uNama` varchar(100) NOT NULL,
+  `uLevel` int(11) NOT NULL DEFAULT '5',
+  `uTelp` varchar(20) NOT NULL,
+  `uEmail` varchar(50) NOT NULL,
+  `uPass` char(32) NOT NULL,
+  `uFoto` varchar(255) DEFAULT NULL,
+  `uSes` varchar(100) DEFAULT NULL,
+  `onCreate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `onUpdate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`uId`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`uId`, `uUname`, `uNama`, `uLevel`, `uTelp`, `uEmail`, `uPass`, `uFoto`, `uSes`, `onCreate`, `onUpdate`) VALUES
+('DP.U.001', 'admin', 'Administartor', 0, '081xxxxxxxxx', 'admin@med.unhas.ac.id', '21232f297a57a5a743894a0e4a801fc3', '78c2x.jpg', 'gngt7scljgsfhqr11b743igrd7', '2015-02-11 12:43:48', '2015-02-14 22:29:26'),
+('DP.U.002', 'kalab', 'Ir. Irsal', 3, '085xxxxxxxxx', 'kalab@dipanegara.ac.id', '966676a567d83cf0fbeb8cd5c280a589', '82timmy.jpg', 'ao5bjl2nh9eticllph2cnekns2', '2015-02-11 12:43:52', '2015-02-14 21:14:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `_jpengadaan`
+--
+
+CREATE TABLE IF NOT EXISTS `_jpengadaan` (
+  `jId` int(11) NOT NULL AUTO_INCREMENT,
+  `jNama` varchar(100) NOT NULL,
+  PRIMARY KEY (`jId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `_jpengadaan`
+--
+
+INSERT INTO `_jpengadaan` (`jId`, `jNama`) VALUES
+(1, 'Pengadaan'),
+(2, 'Sumbangan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `_jruangan`
+--
+
+CREATE TABLE IF NOT EXISTS `_jruangan` (
+  `jId` int(11) NOT NULL AUTO_INCREMENT,
+  `jNama` varchar(100) NOT NULL,
+  PRIMARY KEY (`jId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `_jruangan`
+--
+
+INSERT INTO `_jruangan` (`jId`, `jNama`) VALUES
+(1, 'Lab. Software'),
+(2, 'Lab. Hardware'),
+(3, 'Lab. Jaringan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `_level`
+--
+
+CREATE TABLE IF NOT EXISTS `_level` (
+  `lId` int(11) NOT NULL AUTO_INCREMENT,
+  `lLevel` varchar(20) NOT NULL,
+  PRIMARY KEY (`lId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `_level`
+--
+
+INSERT INTO `_level` (`lId`, `lLevel`) VALUES
+(0, 'Administrator'),
+(1, 'Wakil Ketua I'),
+(2, 'Wakil Ketua II'),
+(3, 'Kepala Laboratorium');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
